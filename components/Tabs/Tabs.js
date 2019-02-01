@@ -3,9 +3,7 @@ class TabLink {
     // assign this.tabElement to the tabElement DOM reference
     // this.tabElement;
     this.tabElement = tabElement;
-    
     this.tabData = this.tabElement.dataset.tab;
-
 
     if(this.tabData === "all") {
 
@@ -17,7 +15,6 @@ class TabLink {
     }
 
     this.cards = Array.from(this.cards).map(card => new TabCard(card));
-
 
 // Add a click event that invokes this.selectTab
 
@@ -52,10 +49,8 @@ class TabLink {
     // Notice we are looping through the this.cards array and invoking selectCard() from the TabCard class. 
     //Just un-comment the code and study what is happening here.
     this.cards.forEach(card => card.selectCard());
-
   }
 }
-
 class TabCard {
   constructor(cardElement){
     // Assign this.cardElement to the cardElement DOM reference
